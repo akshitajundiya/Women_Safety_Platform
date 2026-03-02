@@ -2,75 +2,23 @@ Women Safety Platform
 
 This project is a full-stack emergency response system built to provide secure and rapid distress signaling with encrypted GPS transmission.
 
-It uses React.js, Node.js, Express.js, MongoDB, JWT, bcrypt, and AES encryption to ensure secure authentication and protected emergency communication.
+It uses React.js, Express.js, Node.js, MongoDB, JWT, bcrypt, and AES encryption to ensure secure authentication and protected emergency communication.
 
 📌 Contents
 
-User Registration & Login System
+User registration and login
 
-Password Hashing using bcrypt
+Password hashing with bcrypt
 
-JWT-Based Authentication
+JWT-based authentication
 
-Protected API Routes
+Protected API routes
 
-Real-time GPS Location Capture
+Real-time GPS capture
 
-AES Encrypted SOS Transmission
+AES encrypted SOS transmission
 
-Modular Backend Architecture
-
-RESTful API Design
-
-🏗 Project Structure
-women_safety_platform/
-│
-├── client/        # React frontend
-├── server/        # Express backend
-│   ├── config/
-│   ├── controllers/
-│   ├── middleware/
-│   ├── models/
-│   ├── routes/
-│   └── utils/
-│
-└── README.md
-⚙ Technology Stack
-Frontend
-
-React.js
-
-React Router
-
-Axios
-
-Backend
-
-Node.js
-
-Express.js
-
-MongoDB
-
-Mongoose
-
-JWT Authentication
-
-bcrypt Password Hashing
-
-AES Encryption
-
-🔐 Security Features
-
-Hashed password storage
-
-Token-based route protection
-
-AES encryption for location data
-
-Environment variable configuration
-
-Middleware-level authentication checks
+Modular backend architecture
 
 🚀 How to Run
 1️⃣ Clone this repository
@@ -95,44 +43,32 @@ npm start
 Frontend runs on:
 
 http://localhost:3000
-🔧 Environment Variables
+🔧 Environment Configuration
 
 Create a .env file inside the server directory:
 
 MONGO_URI=your_mongodb_connection_string
 JWT_SECRET=your_jwt_secret
 AES_SECRET=your_encryption_secret
+🏗 Project Structure
+women_safety_platform/
+│
+├── client/
+├── server/
+│   ├── config/
+│   ├── controllers/
+│   ├── middleware/
+│   ├── models/
+│   ├── routes/
+│   └── utils/
+│
+└── README.md
+🔐 Security Highlights
 
-Ensure:
+Hashed password storage
 
-MongoDB URI starts with mongodb:// or mongodb+srv://
+JWT-protected routes
 
-Secrets are not committed to GitHub
+AES encryption for location data
 
-📊 Application Flow
-
-User registers an account
-
-Password is securely hashed
-
-JWT token is issued upon login
-
-User triggers SOS
-
-GPS location is captured
-
-Coordinates are encrypted
-
-Backend verifies token and processes alert
-
-🎯 Future Improvements
-
-Real-time tracking with WebSockets
-
-Firebase push notifications
-
-Redis-based session optimization
-
-AWS deployment
-
-Incident triage chatbot integration
+Environment-based secret management
