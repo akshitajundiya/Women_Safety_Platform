@@ -1,70 +1,41 @@
 Women Safety Platform
 
-A secure, full-stack emergency response system built to enable rapid distress signaling with encrypted location transmission and authenticated access control.
+This project is a full-stack emergency response system built to provide secure and rapid distress signaling with encrypted GPS transmission.
 
-This platform is designed with production-grade backend structure, modular architecture, and security-first principles.
+It uses React.js, Node.js, Express.js, MongoDB, JWT, bcrypt, and AES encryption to ensure secure authentication and protected emergency communication.
 
-System Objective
+📌 Contents
 
-The Women Safety Platform provides:
+User Registration & Login System
 
-Authenticated user access
+Password Hashing using bcrypt
 
-One-click SOS alert triggering
+JWT-Based Authentication
 
-Encrypted GPS coordinate handling
+Protected API Routes
 
-Secure REST API architecture
+Real-time GPS Location Capture
 
-Scalable backend design
+AES Encrypted SOS Transmission
 
-The system prioritizes data security, authentication integrity, and clean architectural separation between client and server.
+Modular Backend Architecture
 
-Core Capabilities
-Authentication & Access Control
+RESTful API Design
 
-Secure user registration and login
-
-Password hashing using bcrypt
-
-JWT-based session authentication
-
-Middleware-protected routes
-
-Encrypted Emergency Signaling
-
-Real-time GPS capture via browser API
-
-AES-based encryption of latitude and longitude
-
-Protected SOS endpoint
-
-Secure request validation pipeline
-
-Backend Architecture
-
-Modular Express.js structure
-
-Controller-based request handling
-
-Mongoose-based data modeling
-
-Environment-based configuration
-
-Production-ready folder structure
-
-Frontend Architecture
-
-React single-page application
-
-React Router-based navigation
-
-Axios-based API communication
-
-Token storage for authenticated requests
-
-Technology Stack
-
+🏗 Project Structure
+women_safety_platform/
+│
+├── client/        # React frontend
+├── server/        # Express backend
+│   ├── config/
+│   ├── controllers/
+│   ├── middleware/
+│   ├── models/
+│   ├── routes/
+│   └── utils/
+│
+└── README.md
+⚙ Technology Stack
 Frontend
 
 React.js
@@ -83,84 +54,37 @@ MongoDB
 
 Mongoose
 
-JWT
+JWT Authentication
 
-bcrypt
+bcrypt Password Hashing
 
-crypto-js (AES encryption)
+AES Encryption
 
-Project Structure
-women_safety_platform/
-│
-├── client/
-│   ├── public/
-│   ├── src/
-│   │   ├── api/
-│   │   ├── pages/
-│   │   └── App.js
-│
-├── server/
-│   ├── config/
-│   ├── controllers/
-│   ├── middleware/
-│   ├── models/
-│   ├── routes/
-│   ├── utils/
-│   └── server.js
-│
-└── README.md
+🔐 Security Features
 
-This separation ensures maintainability, scalability, and ease of extension.
+Hashed password storage
 
-Application Flow
+Token-based route protection
 
-User registers an account.
+AES encryption for location data
 
-Password is hashed and stored securely.
+Environment variable configuration
 
-User logs in and receives a JWT token.
+Middleware-level authentication checks
 
-Token is attached to protected API requests.
-
-User triggers SOS.
-
-Browser captures GPS location.
-
-Coordinates are encrypted using AES.
-
-Backend verifies JWT and processes the request.
-
-Security is enforced at every critical interaction layer.
-
-Environment Configuration
-
-Create a .env file inside the server directory:
-
-MONGO_URI=your_mongodb_connection_string
-JWT_SECRET=your_jwt_secret
-AES_SECRET=your_encryption_secret
-
-Important:
-
-Use strong secret keys.
-
-Do not commit .env.
-
-Ensure MongoDB URI starts with mongodb:// or mongodb+srv://.
-
-Installation Guide
-Clone the Repository
+🚀 How to Run
+1️⃣ Clone this repository
 git clone https://github.com/akshitajundiya/Women_Safety_Platform.git
 cd women_safety_platform
-Backend Setup
+2️⃣ Backend Setup
 cd server
 npm install
 npm start
 
 Server runs on:
-http://localhost:5000
 
-Frontend Setup
+http://localhost:5000
+3️⃣ Frontend Setup
 
 Open a new terminal:
 
@@ -168,49 +92,47 @@ cd client
 npm install
 npm start
 
-Client runs on:
+Frontend runs on:
+
 http://localhost:3000
+🔧 Environment Variables
 
-Security Design Principles
+Create a .env file inside the server directory:
 
-No plaintext password storage
+MONGO_URI=your_mongodb_connection_string
+JWT_SECRET=your_jwt_secret
+AES_SECRET=your_encryption_secret
 
-Token-based authentication
+Ensure:
 
-Encrypted sensitive data transmission
+MongoDB URI starts with mongodb:// or mongodb+srv://
 
-Environment variable secret management
+Secrets are not committed to GitHub
 
-Protected API routing
+📊 Application Flow
 
-Scalability Roadmap
+User registers an account
 
-Redis-based session optimization
+Password is securely hashed
 
-WebSocket-based real-time tracking
+JWT token is issued upon login
+
+User triggers SOS
+
+GPS location is captured
+
+Coordinates are encrypted
+
+Backend verifies token and processes alert
+
+🎯 Future Improvements
+
+Real-time tracking with WebSockets
 
 Firebase push notifications
 
-Cloud deployment (AWS / Docker)
+Redis-based session optimization
+
+AWS deployment
 
 Incident triage chatbot integration
-
-Engineering Focus
-
-This project emphasizes:
-
-Clean separation of concerns
-
-Security-first API design
-
-Maintainable folder structure
-
-Extensible architecture
-
-Interview-ready backend logic
-
-Author
-
-Akshita Mina
-B.Tech Computer Science and Engineering
-Indian Institute of Information Technology, Nagpur
